@@ -1,13 +1,12 @@
-══════════════════════════════════════════════════════════════
+
   VitalCore: NoSQL Implementation Challenge (Redis)
   Proyecto #02 Tópicos Especiales para la Gestión de Datos
-══════════════════════════════════════════════════════════════
-
+  
 PASOS PARA LEVANTAR EL PROYECTO DESDE CERO
 
-╔═══════════════════════════════════╗
-║  PASO 1 — Instalar Docker Desktop ║
-╚═══════════════════════════════════╝
+
+PASO 1 — Instalar Docker Desktop 
+
 
 1. Ir a: https://www.docker.com/products/docker-desktop/
 2. Descargar para Windows (o Mac)
@@ -16,9 +15,7 @@ PASOS PARA LEVANTAR EL PROYECTO DESDE CERO
    aparezca verde (Running)
 
 
-╔══════════════════════════════════╗
-║  PASO 2 — Levantar Redis         ║
-╚══════════════════════════════════╝
+PASO 2 — Levantar Redis       
 
 Abrir una terminal (PowerShell o CMD) en la carpeta del proyecto:
 
@@ -38,9 +35,7 @@ Además en el navegador:
   http://localhost:8001
 
 
-╔══════════════════════════════════╗
-║  PASO 3 — Python y dependencias  ║
-╚══════════════════════════════════╝
+PASO 3 — Python y dependencias 
 
 Necesitas Python 3.11 o superior.
 Descarga desde: https://www.python.org/downloads/
@@ -55,9 +50,7 @@ Entorno virtual:
   pip install -r requirements.txt
 
 
-╔══════════════════════════════════╗
-║  PASO 4 — Generar y cargar datos ║
-╚══════════════════════════════════╝
+  PASO 4 — Generar y cargar datos 
 
 Un solo comando que hace todo:
   python load_data.py
@@ -75,9 +68,7 @@ En consola:
   Carga completada en Xs
 
 
-╔═════════════════════════╗
-║ PASO 5 — Iniciar la API ║
-╚═════════════════════════╝
+PASO 5 — Iniciar la API 
 
   uvicorn api:app --reload --port 8000
 
@@ -88,9 +79,7 @@ Abre en el navegador:
   http://localhost:8000/stats   → KPIs de la plataforma
 
 
-╔═══════════════════════════════════════════════╗
-║  PASO 6 — Conectar Power BI                   ║
-╚═══════════════════════════════════════════════╝
+PASO 6 — Conectar Power BI                
 
 La API expone endpoints CSV especialmente para Power BI:
 
@@ -115,9 +104,7 @@ Visualizaciones sugeridas en Power BI:
   - Filtro: Por especialidad del médico
 
 
-╔══════════════════════════════════════════════╗
-║  ENDPOINTS DE LA API (Patrones de Acceso)    ║
-╚══════════════════════════════════════════════╝
+ ENDPOINTS DE LA API (Patrones de Acceso)   
 
 PATRÓN 1 — Historial clínico completo cronológico:
   GET /patients/{patient_id}/history?limit=50
@@ -142,9 +129,7 @@ RESOLVER alerta:
   POST /alerts/{alert_id}/resolve
 
 
-╔═══════════════════════════════════════════════╗
-║  ESTRUCTURA DEL PROYECTO                      ║
-╚═══════════════════════════════════════════════╝
+ESTRUCTURA DEL PROYECTO        
 
 vitalcore/
 ├── docker-compose.yml   → levanta Redis Stack
